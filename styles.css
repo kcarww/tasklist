@@ -1,0 +1,108 @@
+:root {
+    --primary: #60A5FA;
+    --zinc900: #18181B;
+    --zinc700: #3F3F46;
+    --zinc500: #71717A;
+    --zinc400: #A1A1AA;
+    --zinc50: #FAFAFA;
+    --error: #EF4444;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--zinc900);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: var(--zinc50);
+    font-weight: 600;
+    font-size: 32px;
+}
+
+.input-container {
+    position: relative;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+.input-container input {
+    background-color: var(--zinc700);
+    border: solid 2px transparent;
+    border-radius: 8px;
+    height: 40px;
+    width: 340px;
+    padding-right: 44px;
+    padding-left: 12px;
+    outline: none;
+    transition: all 300ms ease;
+    color: var(--zinc500);
+}
+
+
+.input-container input:focus {
+    border: solid 2px var(--primary);
+    background-color: var(--zinc700);
+    color: var(--zinc50);
+}
+
+.btn-add {
+    width: 28px;
+    height: 28px;
+    background-color: var(--primary);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    color: var(--zinc50);
+    right: 8px;
+}
+
+.btn-add i {
+    color: var(--zinc50);
+}
+
+.tasks {
+    list-style: none;
+    padding: 0;
+    max-width: 500px;
+}
+.tasks li {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid var(--zinc700) 1px;
+    padding: 8px 0;
+}
+
+.tasks li label {
+    cursor: pointer;
+}
+
+.tasks li input {
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.tasks li span {
+    font-size: 16px;
+    color: var(--zinc50);
+    transition: 0.3s ease;
+}
+
+.tasks li input:checked ~ span {
+    text-decoration: line-through;
+    color: var(--zinc700);
+}
+
+
+.tasks li i {
+    color: var(--zinc500);
+    cursor: pointer;
+}
